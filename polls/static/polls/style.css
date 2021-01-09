@@ -1,12 +1,92 @@
-li a {
-  color: white;
+
+@import url('https://fonts.googleapis.com/css2?family=Laila');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@600&display=swap');
+:root {
+  --base-color: #3B0009;
+  --darker-color: #160104;
+  --whiter-color: #F9F8F8;
+  --transparent-base-color: #461218;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Cambria;
+}
+
+html,
+body {
+    height: 100%;
 }
 
 body {
-  background: white url("images/background.gif");
+  background-color: var(--base-color);
+  display: grid;
+  grid-template-rows: 15% 35% 40%;
+  position: relative;
+  min-height: 100vh;
+}
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+h2 {
+  background-color: var(--whiter-color);
+  font-size: xx-large;
+  font-family: 'Laila', serif;
+  font-style: italic;
+  text-align: center;
+  padding: 1em;
+  -webkit-box-shadow: 0 8px 6px 0 var(--darker-color);
+	   -moz-box-shadow: 0 8px 6px 0 var(--darker-color);
+	        box-shadow: 0 8px 6px 0 var(--darker-color);
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  padding: 0.3em;
+  text-align: center;
+  background-color: var(--darker-color);
+  color: var(--whiter-color);
+}
+
+h1 em {
+  font-family: 'Laila', serif;
+}
+
+.radio {
+  font-size: 2rem;
+  color: var(--whiter-color);
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 0.5em;
+  padding: 0.2em;
+  background: linear-gradient(to left, var(--transparent-base-color) 50%, var(--whiter-color) 50%) right;
+  background-size: 200%;
+  transition: .5s ease-out;
+}
+
+.radio:hover {
+  background-position: left;
+  color: var(--darker-color);
+}
+
+.question-set {
+  display: grid;
+  grid-template-rows: min-content auto;
+  grid-gap: 0.5em;
+  padding: 1em;
+}
+
+/* Set up footer at bottom https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
+.button {
+  font-size: 2rem;
+  background-color: var(--darker-color);
+  color: var(--whiter-color);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 0.2em;
 }
