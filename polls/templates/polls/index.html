@@ -9,12 +9,15 @@
       type="text/css"
       href="{% static 'polls/style.css' %}"
     />
-    <title>Document</title>
+    <title>Existenciality</title>
   </head>
   <body>
-    <h1>
+    <header>
+    <h1>Existenciality</h1>
+    <p>
       <em>Preguntas</em> que no me dejan <em>dormir</em> por las noches 😨
-    </h1>
+    </p>
+    </header>
     <h2>{{ question.question_text }}</h2>
 
     {% if error_message %}
