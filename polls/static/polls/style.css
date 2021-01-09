@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@600&display=swap');
 :root {
   --base-color: #3B0009;
-  --darker-color: #302123;
+  --darker-color: #160104;
   --whiter-color: #F9F8F8;
   --transparent-base-color: #461218;
 }
@@ -28,6 +28,8 @@ body {
   background-color: var(--base-color);
   display: grid;
   grid-template-rows: 15% 35% 40%;
+  position: relative;
+  min-height: 100vh;
 }
 
 h2 {
@@ -50,11 +52,6 @@ h1 em {
   font-family: 'Laila', serif;
 }
 
-form {
-
-  padding: 1em;
-}
-
 .radio {
   font-size: 2rem;
   color: var(--whiter-color);
@@ -63,4 +60,22 @@ form {
   grid-gap: 0.5em;
   padding: 0.2em;
   background-color: var(--transparent-base-color);
+}
+
+/* Set up footer at bottom https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
+.button {
+  font-size: 2rem;
+  background-color: var(--darker-color);
+  color: var(--whiter-color);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 0.2em;
+}
+
+.question-set {
+  display: grid;
+  grid-template-rows: min-content auto;
+  grid-gap: 0.5em;
+  padding: 1em;
 }
