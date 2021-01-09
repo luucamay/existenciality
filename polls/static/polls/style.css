@@ -59,7 +59,21 @@ h1 em {
   grid-template-columns: min-content auto;
   grid-gap: 0.5em;
   padding: 0.2em;
-  background-color: var(--transparent-base-color);
+  background: linear-gradient(to left, var(--transparent-base-color) 50%, var(--whiter-color) 50%) right;
+  background-size: 200%;
+  transition: .5s ease-out;
+}
+
+.radio:hover {
+  background-position: left;
+  color: var(--darker-color);
+}
+
+.question-set {
+  display: grid;
+  grid-template-rows: min-content auto;
+  grid-gap: 0.5em;
+  padding: 1em;
 }
 
 /* Set up footer at bottom https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
@@ -71,11 +85,4 @@ h1 em {
   position: absolute;
   bottom: 0;
   padding: 0.2em;
-}
-
-.question-set {
-  display: grid;
-  grid-template-rows: min-content auto;
-  grid-gap: 0.5em;
-  padding: 1em;
 }
