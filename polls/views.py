@@ -5,13 +5,12 @@ from django.views import generic
 from django.utils import timezone
 
 from .models import Choice, Question
+from random import randint
 
 def index(request):
-    try:
-        question = Question.objects.get(pk=1)
-    except Question.DoesNotExist:
-        raise Http404("Question does not exist")
-    question = get_object_or_404(Question, pk=1)
+    total_questions = Question.objects.count()
+    question_id = randint(1, total_questions)
+    question = get_object_or_404(Question, pk=question_id)
     return render(request, 'polls/index.html', {'question': question})
 
 class DetailView(generic.DetailView):
