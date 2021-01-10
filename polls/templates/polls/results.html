@@ -25,7 +25,6 @@
       <li class="result">{{ choice.choice_text }} -- {{ choice.votes }} voto{{ choice.votes|pluralize }}</li>
       {% endfor %}
     </ul>
-
-    <a href="{% url 'polls:index'  %}" class="button">Responder otra pregunta</a>
+    <a href="{% url 'polls:detail' question.next_id  %}" class="button">Responder otra pregunta</a>
   </body>
 </html>
