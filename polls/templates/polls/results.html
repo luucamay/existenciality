@@ -18,7 +18,7 @@
         <em>Preguntas</em> que no me dejan <em>dormir</em> por las noches 😨
       </p>
     </header>
-    <h2>{{ question.question_text }}</h2>
+    <h2>Resultados para: {{ question.question_text }}</h2>
 
     <ul>
       {% for choice in question.choice_set.all %}
@@ -26,6 +26,6 @@
       {% endfor %}
     </ul>
 
-    <a href="{% url 'polls:detail' question.id %}" class="button">Responder otra pregunta</a>
+    <a href="{% url 'polls:index'  %}" class="button">Responder otra pregunta</a>
   </body>
 </html>
