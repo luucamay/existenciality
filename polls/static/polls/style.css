@@ -84,7 +84,7 @@ h2 {
   background: var(--transparent-base-color);
   color: var(--whiter-color);
   padding: 0.2em;
-  margin: 0.5em;
+  margin: 0.25em 0.5em 0;
 }
 
 .question-set {
@@ -96,6 +96,17 @@ h2 {
 ul {
   list-style-type: none;
 }
+
+a:link, a:visited {
+  text-align: center;
+  text-decoration: none;
+}
+
+button:hover, a:hover, a:active {
+  background-color: var(--whiter-color);
+  color: var(--darker-color);
+}
+
 /* Set up footer at bottom https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
 .button {
   font-size: 2rem;
@@ -105,4 +116,5 @@ ul {
   position: absolute;
   bottom: 0;
   padding: 0.2em;
+  text-align: center;
 }
