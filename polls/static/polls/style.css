@@ -109,7 +109,15 @@ button:hover, a:hover, a:active {
 
 /* Set up footer at bottom https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
 .button {
+  text-align: center;
+  color: var(--whiter-color);
+  background-color: var(--darker-color);
   font-size: 2rem;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
   background-color: var(--darker-color);
   color: var(--whiter-color);
   width: 100%;
