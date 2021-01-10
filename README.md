@@ -49,4 +49,5 @@ python manage.py createsuperuser
 8. Create questions in the admin view
 9. Open the app view: http://127.0.0.1:8000
 
-
+## Articulo sobre esta aplicacion
+Si te interesa o quieres saber como construir esta aplicacion puedes leer esta [guia](https://www.djangoproject.com/start/)
