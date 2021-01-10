@@ -5,12 +5,9 @@ from django.views import generic
 from django.utils import timezone
 
 from .models import Choice, Question
-from random import randint
 
 def index(request):
-    total_questions = Question.objects.count()
-    question_id = randint(1, total_questions)
-    question = get_object_or_404(Question, pk=question_id)
+    question = get_object_or_404(Question, pk=1)
     return render(request, 'polls/index.html', {'question': question})
 
 class DetailView(generic.DetailView):
