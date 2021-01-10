@@ -20,9 +20,7 @@
     </header>
     <h2>{{ question.question_text }}</h2>
 
-    {% if error_message %}
-    <p><strong>{{ error_message }}</strong></p>
-    {% endif %}
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
     <form action="{% url 'polls:vote' question.id %}" method="post">
       <div class="question-set">

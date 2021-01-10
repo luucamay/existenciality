@@ -1,12 +1,48 @@
-<h1>{{ question.question_text }}</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'polls/style.css' %}"
+    />
+    <title>Existenciality</title>
+  </head>
+  <body>
+    <header>
+      <h1>Existenciality</h1>
+      <p>
+        <em>Preguntas</em> que no me dejan <em>dormir</em> por las noches 😨
+      </p>
+      {% if error_message %}
+      <p class="error"><strong>{{ error_message }}</strong></p>
+      {% endif %}
+    </header>
+    <h2>{{ question.question_text }}</h2>
 
-{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-
-<form action="{% url 'polls:vote' question.id %}" method="post">
-{% csrf_token %}
-{% for choice in question.choice_set.all %}
-    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
-    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
-{% endfor %}
-<input type="submit" value="Vote">
-</form>
+    <form action="{% url 'polls:vote' question.id %}" method="post">
+      <div class="question-set">
+        {% csrf_token %} {% for choice in question.choice_set.all %}
+        <label for="choice{{ forloop.counter }}" class="choice">
+          <input
+            type="radio"
+            name="choice"
+            id="choice{{ forloop.counter }}"
+            value="{{ choice.id }}"
+          />
+          {{ choice.choice_text }}</label
+        >
+        {% endfor %}
+      </div>
+      <div class="footer">
+        <button type="submit" class="button">Responder</button>
+        <a href="{% url 'polls:index'  %}" class="button"
+          >Otra pregunta random</a
+        >
+      </div>
+    </form>
+  </body>
+</html>

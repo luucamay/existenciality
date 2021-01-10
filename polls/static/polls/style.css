@@ -126,3 +126,8 @@ button:hover, a:hover, a:active {
   padding: 0.2em;
   text-align: center;
 }
+
+.error {
+  font-size: 1.5em;
+  color: red;
+}
