@@ -27,7 +27,7 @@
     <form action="{% url 'polls:vote' question.id %}" method="post">
       <div class="question-set">
         {% csrf_token %} {% for choice in question.choice_set.all %}
-        <label for="choice{{ forloop.counter }}" class="radio">
+        <label for="choice{{ forloop.counter }}" class="choice">
           <input
             type="radio"
             name="choice"

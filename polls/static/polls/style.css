@@ -48,7 +48,6 @@ h1 {
 
 em {
   font-family: 'Laila', serif;
-
 }
 
 h2 {
@@ -63,7 +62,7 @@ h2 {
 	        box-shadow: 0 8px 6px 0 var(--darker-color);
 }
 
-.radio {
+.choice {
   font-size: 2rem;
   color: var(--whiter-color);
   display: grid;
@@ -75,18 +74,28 @@ h2 {
   transition: .5s ease-out;
 }
 
-.radio:hover {
+.choice:hover {
   background-position: left;
   color: var(--darker-color);
 }
 
+.result {
+  font-size: 2rem;
+  background: var(--transparent-base-color);
+  color: var(--whiter-color);
+  padding: 0.2em;
+  margin: 0.5em;
+}
+
 .question-set {
   display: grid;
-  grid-template-rows: min-content auto;
   grid-gap: 0.5em;
   padding: 1em;
 }
 
+ul {
+  list-style-type: none;
+}
 /* Set up footer at bottom https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
 .button {
   font-size: 2rem;
