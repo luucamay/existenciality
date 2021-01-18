@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Car Images</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    {% for car in car_images %}
+    <div>
+      <img
+        src="{{ car.photo.url }}"
+        style="width: 100%; float: left; margin-right: 10px"
+      />
+    </div>
+    {% endfor %}
+  </body>
+</html>
