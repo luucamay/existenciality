@@ -1,10 +1,13 @@
 # Existenciality
+
 Existenciality is a Django based web application that shows general questions about life. Check out the [web application](djangoimilla.herokuapp.com) on Heroku
 
 ## How it was built
+
 Following the main instructions from the [official documentation](https://docs.djangoproject.com/en/3.1/intro/tutorial01/) on Django!
 
 ## Built Setup
+
 If you want to run the code of this project you can follow these instructions:
 
 1. Clone this respository
@@ -12,6 +15,7 @@ If you want to run the code of this project you can follow these instructions:
 ```
 git clone https://github.com/luucamay/existenciality.git
 ```
+
 2. [Download and install Python 3](https://www.python.org/downloads/)
 
 3. Set up a virtual environment first. For windows with git bash:
@@ -21,6 +25,7 @@ source ~/.virtualenvs/djangodev/Scripts/activate
 ```
 
 4. Use pip to install Django
+
 ```
  python -m pip install Django
 ```
@@ -34,13 +39,15 @@ source ~/.virtualenvs/djangodev/Scripts/activate
 ```
 
 6. Setup database
-* Create the required tables defined at settings.py in the INSTALLEDD_APPS array. Make the migration happen
+
+- Create the required tables defined at settings.py in the INSTALLEDD_APPS array. Make the migration happen
 
 ```
 python manage.py migrate
 ```
 
-* Create the admin user
+- Create the admin user
+
 ```
 python manage.py createsuperuser
 ```
@@ -50,4 +57,9 @@ python manage.py createsuperuser
 9. Open the app view: http://127.0.0.1:8000
 
 ## Articulo sobre esta aplicacion
+
 Si te interesa o quieres saber como construir esta aplicacion puedes leer esta [guia](https://www.djangoproject.com/start/)
+
+## Recursos
+
+- [Upload images in Django](https://www.geeksforgeeks.org/python-uploading-images-in-django/)
