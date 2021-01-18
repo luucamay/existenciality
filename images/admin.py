@@ -5,16 +5,9 @@ from .models import Car
 
 
 class CarAdmin(admin.ModelAdmin):
-
-    readonly_fields = ["photo", "headshot_image"]
-
-    def headshot_image(self, obj):
-        return mark_safe('<img src="{url}" width="{width}" height={height} />'.format(
-            url=obj.photo.url,
-            width=obj.photo.width,
-            height=obj.photo.height,
-        )
-        )
+    # explicitly reference fields to be shown, note image_tag is read-only
+    fields = ('image_tag', 'photo')
+    readonly_fields = ('image_tag',)
 
 
 # Register your models here.
