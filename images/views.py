@@ -1,6 +1,7 @@
 
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+# The next line imports the car model too
 from .forms import *
 
 
@@ -26,7 +27,6 @@ def display_car_images(request):
     if request.method == 'GET':
 
         # getting all the objects of car.
-        # TO DO: answer why is the car Model not imported?
         Cars = Car.objects.all()
         return render(request, 'images/display_car_images.html',
                       {'car_images': Cars})
