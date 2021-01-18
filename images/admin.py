@@ -8,6 +8,7 @@ class CarAdmin(admin.ModelAdmin):
     # explicitly reference fields to be shown, note image_tag is read-only
     fields = ('image_tag', 'photo')
     readonly_fields = ('image_tag',)
+    list_display = ('image_tag', 'photo')
 
 
 # Register your models here.

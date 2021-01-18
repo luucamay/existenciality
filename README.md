@@ -64,3 +64,4 @@ Si te interesa o quieres saber como construir esta aplicacion puedes leer esta [
 
 - [Upload images in Django](https://www.geeksforgeeks.org/python-uploading-images-in-django/)
 - [Long answer to upload images in Django Admin](https://teamtreehouse.com/community/django-display-imagefield-with-adminsiteregistermodelmymodel-trick)
+- [Many solutions to show images in admin](https://www.mmbyte.com/article/41421.html)
